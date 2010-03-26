@@ -11,11 +11,11 @@
 @implementation Fred
 
 #pragma mark properties
-@synthesize fredsDelegate;
+@synthesize delegate;
 
 - (void)dealloc {
     // a delegator doesn't retain it's delegate, and so it doesn't release it
-    fredsDelegate = nil;
+    delegate = nil;
     
     [super dealloc];
 }
@@ -23,8 +23,8 @@
 
 - (NSString *)stringForButtonPressed {
     
-    // send message to fredsDelegate that fred wants a string
-    return [self.fredsDelegate fredDidRequestString];
+    // send message to delegate that fred wants a string
+    return [self.delegate fred:self didRequestAString:YES];
 }
 
 @end

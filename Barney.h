@@ -13,6 +13,12 @@
 // declare Barney implements FredProtocol
 @interface Barney : NSObject <FredProtocol> {
 
+#pragma mark Instance variables
+    Fred *fred;    
 }
+
+#pragma mark Properties
+@property(nonatomic,retain) Fred *fred;
+
 
 @end

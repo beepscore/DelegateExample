@@ -12,13 +12,15 @@
 @protocol FredProtocol;
 
 @interface Fred : NSObject {
-
+#pragma mark Instance variables
+    id delegate;
 }
 
-// a delegator should assign it's delegate, don't retain it.
-// fredsDelegate type is id (any type)
-// In .xib, connect fredsDelegate outlet to Barney object
-@property(nonatomic,assign)IBOutlet id fredsDelegate;
+#pragma mark Properties
+// a delegator should manage its delegate property with assign, not retain.
+// Ref http://cocoawithlove.com/2009/07/rules-to-avoid-retain-cycles.html
+// delegate type is id (any type)
+@property(nonatomic,assign)IBOutlet id delegate;
 
 - (NSString *)stringForButtonPressed;
 
@@ -26,6 +28,6 @@
 
 // list FredProtocol methods
 @protocol FredProtocol
-- (NSString *)fredDidRequestString;
+- (NSString *)fred:(Fred *)sender didRequestAString:(BOOL)requestedAString;
 @end
 

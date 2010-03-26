@@ -7,14 +7,13 @@
 //
 
 #import "DelegateExampleAppDelegate.h"
-#import "Fred.h"
+#import "Barney.h"
 
 @implementation DelegateExampleAppDelegate
 
 #pragma mark properties
 @synthesize window;
 @synthesize myLabel;
-@synthesize fred;
 @synthesize barney;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
@@ -25,7 +24,6 @@
 - (void)dealloc {
     [window release], window = nil;
     [myLabel release], myLabel = nil;
-    [fred release], fred = nil;
     [barney release], barney = nil;
     
     [super dealloc];
@@ -34,7 +32,7 @@
 
 - (IBAction)handleGoButton:(id)sender {
     // ask fred for a string to put in myLabel
-    [self.myLabel setStringValue:[self.fred stringForButtonPressed]];
+    [self.myLabel setStringValue:[self.barney.fred stringForButtonPressed]];
 }
 
 @end
