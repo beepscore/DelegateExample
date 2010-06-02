@@ -24,14 +24,22 @@
 - (void)dealloc {
     [window release], window = nil;
     [myLabel release], myLabel = nil;
+    
     [barney release], barney = nil;
     
     [super dealloc];
 }
 
 
-- (IBAction)handleGoButton:(id)sender {
+- (IBAction)handleStartButton:(id)sender {
     // ask fred for a string to put in myLabel
+    
+    // Here the program flow is convoluted and a bit contrived.
+    // DelegateExampleAppDelegate uses its reference to barney to get to fred (i.e. self.barney.fred)
+    // DelegateExampleAppDelegate calls fred's stringForButtonPressed method.
+    // then fred will tell his delegate, barney, to supply the string    
+    // probably could rework this into a more clear example!
+    
     [self.myLabel setStringValue:[self.barney.fred stringForButtonPressed]];
 }
 

@@ -11,7 +11,11 @@
 @implementation Fred
 
 #pragma mark properties
+// synthesize getter and setter accessors for fred's delegate property
 @synthesize delegate;
+
+// Note that fred doesn't set his own delegate here.
+// Barney sets itself to be fred's delegate.
 
 - (void)dealloc {
     // a delegator doesn't retain it's delegate, and so it doesn't release it

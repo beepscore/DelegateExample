@@ -4,7 +4,7 @@
 //
 //  Created by Steve Baker on 3/26/10.
 //  Copyright 2010 Beepscore LLC. All rights reserved.
-//
+//  Reference: http://developer.apple.com/mac/library/documentation/Cocoa/Conceptual/CocoaFundamentals/CommunicatingWithObjects/CommunicateWithObjects.html#//apple_ref/doc/uid/TP40002974-CH7-SW18
 
 #import <Cocoa/Cocoa.h>
 @class Barney;
@@ -23,6 +23,6 @@
 // barney is instantiated in .xib, which will autorelease it.  We need to retain it.
 @property(nonatomic,retain)IBOutlet Barney *barney;
 
-- (IBAction)handleGoButton:(id)sender;
+- (IBAction)handleStartButton:(id)sender;
 
 @end
