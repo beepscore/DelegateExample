@@ -40,7 +40,7 @@
 
 
 #pragma mark FredProtocol method
-- (NSString *)fred:(Fred *)sender didRequestAString:(BOOL)requestedAString {
+- (NSString *)fred:(id)sender didRequestAString:(BOOL)requestedAString {
 
     return @"Hi from barney, fred's delegate!";
 }

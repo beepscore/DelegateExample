@@ -8,8 +8,10 @@
 
 #import <Cocoa/Cocoa.h>
 
-// declare FredProtocol.  We will list methods below, after interface block.
-@protocol FredProtocol;
+// declare FredProtocol
+@protocol FredProtocol
+- (NSString *)fred:(id)sender didRequestAString:(BOOL)requestedAString;
+@end
 
 @interface Fred : NSObject {
 #pragma mark Instance variables
@@ -24,10 +26,5 @@
 
 - (NSString *)stringForButtonPressed;
 
-@end
-
-// list FredProtocol methods
-@protocol FredProtocol
-- (NSString *)fred:(Fred *)sender didRequestAString:(BOOL)requestedAString;
 @end
 
