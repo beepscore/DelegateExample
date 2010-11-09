@@ -7,11 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
-// import Fred.h to see the FredProtocol declaration
+// import Fred.h to see the FredDelegate protocol declaration
 #import "Fred.h"
 
-// declare Barney implements FredProtocol
-@interface Barney : NSObject <FredProtocol> {
+// declare Barney implements FredDelegate
+@interface Barney : NSObject <FredDelegate> {
 
 #pragma mark Instance variables
     Fred *fred;    

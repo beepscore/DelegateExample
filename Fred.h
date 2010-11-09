@@ -8,8 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 
-// declare FredProtocol
-@protocol FredProtocol
+// declare FredDelegate protocol
+@protocol FredDelegate
 - (NSString *)fred:(id)sender didRequestAString:(BOOL)requestedAString;
 @end
 
