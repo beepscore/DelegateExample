@@ -11,9 +11,7 @@
 
 @interface DelegateExampleAppDelegate : NSObject <NSApplicationDelegate> {
 #pragma mark instance variables
-    NSWindow *window;
-    NSTextField *myLabel;
-    Barney *barney;
+    // Objective C automatically adds instance variables to back properties
 }
 
 #pragma mark properties

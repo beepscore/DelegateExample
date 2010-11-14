@@ -10,15 +10,14 @@
 // import Fred.h to see the FredDelegate protocol declaration
 #import "Fred.h"
 
-// declare Barney implements FredDelegate
+// declare Barney implements FredDelegate protocol
 @interface Barney : NSObject <FredDelegate> {
 
 #pragma mark Instance variables
-    Fred *fred;    
+    // Objective C automatically adds instance variables to back properties
 }
 
 #pragma mark Properties
 @property(nonatomic,retain) Fred *fred;
-
 
 @end
